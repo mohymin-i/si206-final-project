@@ -1,4 +1,5 @@
 import matplotlib
+import json
 import matplotlib.pyplot as plt
 
 #fake data to create visualizations that will be replaced once there are calculations
@@ -14,4 +15,11 @@ ax.grid()
 
 fig.savefig("fake_airplane_data.png")
 plt.show()
+
+N = 12
+width = 0.35
+ind = np.arange(N)
+
+p1 = ax.bar(ind, total, width, color='blue')
+p2 = ax.bar()
 

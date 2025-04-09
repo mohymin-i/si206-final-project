@@ -24,5 +24,17 @@ def main():
             json.dump(data, f, indent=2)
         except Exception as e:
             print("failed to write response to file:", e)
+
+def get_flight_prices(table, dictionary):
+    #store json into dictionary 
+    with open('output.json', 'r') as file:
+        python_dict = json.load(file)
+    
+    #store dictionary into database
+    dictionary["id"] = None
+    insert_query = f"INSERT INTO {table}"
+
+    
+
 if __name__ == "__main__":
     main()

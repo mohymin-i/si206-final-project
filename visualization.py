@@ -1,31 +1,5 @@
-import requests
+import matplotlib.pyplot as plt
 import json
-import sqlite3
-
-def main():
-    url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
-    params = {
-    "originLocationCode": "DTW",
-    "destinationLocationCode": "SEA",
-    "departureDate": "2025-05-05",
-    "adults": 1,
-    "nonStop": "false",
-    "max": 10
-    }
-    headers = {
-    'Authorization': f'Bearer h0mkawudvdipGSGTYyCwc8RMkibw'
-    }
-
-    response = requests.get(url, params=params, headers=headers)
-    data = response.json()
-    print(data)
-
-    with open("output.json", "w") as f:
-        try:
-            json.dump(data, f, indent=2)
-        except Exception as e:
-            print("failed to write response to file:", e)
-
 
 def get_flight_prices(table, conn):
     #load json data
@@ -57,9 +31,3 @@ def get_flight_prices(table, conn):
     plt.grid(axis='y', linestyle="--", alpha=0.7)
     plt.tight_layout()
     plt.show()
-
-
-    
-
-if __name__ == "__main__":
-    main()

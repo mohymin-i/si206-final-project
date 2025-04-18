@@ -19,3 +19,12 @@ then use the access token in this line, replacing only the string after Bearer w
     headers = {
     'Authorization': 'Bearer BJTt7l3MBln2oGkedVT7peVqDIdn'
     }
+
+Documentation
+
+https://developers.amadeus.com/self-service/category/flights/api-doc/flight-offers-search/api-reference
+
+https://developer.accuweather.com/accuweather-locations-api/apis/get/locations/v1/cities/search
+
+https://www.ccra.com/airport-codes/
+

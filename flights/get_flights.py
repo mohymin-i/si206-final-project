@@ -2,8 +2,11 @@ import requests
 import json
 import sqlite3
 import sys
+import os
+from dotenv import load_dotenv
 
 def main(depart, arrive, date):
+    load_dotenv()
     url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
     params = {
     "originLocationCode": depart,
@@ -14,12 +17,12 @@ def main(depart, arrive, date):
     "max": 10
     }
     headers = {
-    'Authorization': 'Bearer BJTt7l3MBln2oGkedVT7peVqDIdn'
+    'Authorization': f'Bearer {os.getnev("AMEDUS_BEARER_TOKEN")}'
     }
 
     response = requests.get(url, params=params, headers=headers)
     data = response.json()
-    print(data)
+    #print(data)
 
     with open("output.json", "w") as f:
         try:

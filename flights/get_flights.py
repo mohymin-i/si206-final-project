@@ -32,8 +32,8 @@ if __name__ == "__main__":
     try:
         depart, arrive, date = sys.argv[1:4]
     except ValueError:
-        print("""Usage: python get_flight.py <DEPART LOCATION CODE> <ARRIVAL LOCATION CODE> <DEPARTURE_DATE>
-- Ex: $python get_flight.py DTW SEA 2025-05-05
+        print("""Usage: python get_flights.py <DEPART LOCATION CODE> <ARRIVAL LOCATION CODE> <DEPARTURE_DATE>
+- Ex: $python get_flights.py DTW SEA 2025-05-05
 - Dates must be in the future """)
         sys.exit(1)
     main(depart, arrive, date)

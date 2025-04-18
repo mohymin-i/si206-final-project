@@ -1,0 +1,511 @@
+{
+  "meta": {
+    "count": 3,
+    "links": {
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=JFK&destinationLocationCode=ATL&departureDate=2025-09-06&adults=1&nonStop=true&max=10"
+    }
+  },
+  "data": [
+    {
+      "type": "flight-offer",
+      "id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-19",
+      "lastTicketingDateTime": "2025-04-19",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT2H30M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "JFK",
+                "terminal": "5",
+                "at": "2025-09-06T08:15:00"
+              },
+              "arrival": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-09-06T10:45:00"
+              },
+              "carrierCode": "B6",
+              "number": "519",
+              "aircraft": {
+                "code": "223"
+              },
+              "operating": {
+                "carrierCode": "B6"
+              },
+              "duration": "PT2H30M",
+              "id": "1",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "95.14",
+        "base": "76.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "95.14",
+        "additionalServices": [
+          {
+            "amount": "30.72",
+            "type": "CHECKED_BAGS"
+          }
+        ]
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "B6"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "95.14",
+            "base": "76.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "1",
+              "cabin": "ECONOMY",
+              "fareBasis": "UI2AUEL1",
+              "brandedFare": "DN",
+              "brandedFareLabel": "BLUE BASIC",
+              "class": "L",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "CHECKED BAG FIRST",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHECKED BAG SECOND",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "EXTRA LEGROOM",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ADVANCE SEAT SELECTION",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "NON ALCOHOLIC DRINK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "2",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-19",
+      "lastTicketingDateTime": "2025-04-19",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT2H30M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "JFK",
+                "terminal": "5",
+                "at": "2025-09-06T21:40:00"
+              },
+              "arrival": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-09-07T00:10:00"
+              },
+              "carrierCode": "B6",
+              "number": "719",
+              "aircraft": {
+                "code": "223"
+              },
+              "operating": {
+                "carrierCode": "B6"
+              },
+              "duration": "PT2H30M",
+              "id": "2",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "95.14",
+        "base": "76.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "95.14",
+        "additionalServices": [
+          {
+            "amount": "30.72",
+            "type": "CHECKED_BAGS"
+          }
+        ]
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "B6"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "95.14",
+            "base": "76.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "2",
+              "cabin": "ECONOMY",
+              "fareBasis": "UI2AUEL1",
+              "brandedFare": "DN",
+              "brandedFareLabel": "BLUE BASIC",
+              "class": "L",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "CHECKED BAG FIRST",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHECKED BAG SECOND",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "EXTRA LEGROOM",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ADVANCE SEAT SELECTION",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "NON ALCOHOLIC DRINK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "3",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-19",
+      "lastTicketingDateTime": "2025-04-19",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT2H41M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "JFK",
+                "terminal": "5",
+                "at": "2025-09-06T12:55:00"
+              },
+              "arrival": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-09-06T15:36:00"
+              },
+              "carrierCode": "B6",
+              "number": "419",
+              "aircraft": {
+                "code": "223"
+              },
+              "operating": {
+                "carrierCode": "B6"
+              },
+              "duration": "PT2H41M",
+              "id": "3",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "95.14",
+        "base": "76.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "95.14",
+        "additionalServices": [
+          {
+            "amount": "30.72",
+            "type": "CHECKED_BAGS"
+          }
+        ]
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "B6"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "95.14",
+            "base": "76.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "3",
+              "cabin": "ECONOMY",
+              "fareBasis": "UI2AUEL1",
+              "brandedFare": "DN",
+              "brandedFareLabel": "BLUE BASIC",
+              "class": "L",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "CHECKED BAG FIRST",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CHECKED BAG SECOND",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "EXTRA LEGROOM",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ADVANCE SEAT SELECTION",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "NON ALCOHOLIC DRINK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dictionaries": {
+    "locations": {
+      "ATL": {
+        "cityCode": "ATL",
+        "countryCode": "US"
+      },
+      "JFK": {
+        "cityCode": "NYC",
+        "countryCode": "US"
+      }
+    },
+    "aircraft": {
+      "223": "AIRBUS  A220-300"
+    },
+    "currencies": {
+      "EUR": "EURO"
+    },
+    "carriers": {
+      "B6": "JETBLUE AIRWAYS"
+    }
+  }
+}

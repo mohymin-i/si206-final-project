@@ -27,6 +27,7 @@ def main():
         except Exception as e:
             print("failed to write response to file:", e)
 
+
 def get_flight_prices(table, conn):
     #load json data
     with open('output.json', 'r') as file:

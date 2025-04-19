@@ -12,12 +12,15 @@ def main():
     table = soup.find("tbody", class_="row-striping row-hover")
     rows = table.find_all("tr")
     data = {}
-
+    S = set()
     for row in rows:
-        city = row.find("td", class_="column-2").text
-        country = row.find("td", class_="column-1").text
+        city = row.find("td", class_="column-1").text
+        country = row.find("td", class_="column-2").text
         code = row.find("td", class_="column-3").text
-        data[city] = (code, country)
+        if city in data:
+            data[city].append((code, country))
+        else:
+            data[city] = [(code, country)]
     
 
     with open("output.json", "w") as f:

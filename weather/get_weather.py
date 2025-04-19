@@ -18,17 +18,22 @@ Miami -> 347936
 Dallas -> 351194
 """
 
-def main(location_code):
+def main(location_code, forecast_type):
     load_dotenv()
 
-    url = f'http://dataservice.accuweather.com/forecasts/v1/daily/5day/{location_code}'
+    # Different APIs to call from lowkey just need more rows of data
+    if forecast_type == "hourly":
+        url = f'http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/{location_code}'
+    else:
+        url = f'http://dataservice.accuweather.com/forecasts/v1/daily/5day/{location_code}'
+
     params = {
     "apikey": os.getenv("ACCUWEATHER_API_KEY")
     }
 
     response = requests.get(url, params=params)
     data = response.json()
-    print(data)
+    #print(data)
 
     with open("output.json", "w") as f:
         try:
@@ -40,10 +45,13 @@ def main(location_code):
 
 if __name__ == "__main__":
     try:
-        code = sys.argv[1]
+        code, forecast_type = sys.argv[1:3]
     except (IndexError, ValueError):
-        print("""Usage: python get_weather.py <LOCATION CODE>
-Ex Los Angeles: $python get_weather.py 347625
+        print("""Usage: python get_weather.py <LOCATION_CODE> <hourly || daily>
+Ex Los Angeles: $python get_weather.py 347625 daily
 See comment in this file for location codes.""")
         sys.exit(1)
-    main(code)
+    if forecast_type != "hourly" and forecast_type != "daily":
+        print("Error, unknown forecast type, only use 'daily' or 'hourly'")
+        sys.exit(1)
+    main(code, forecast_type)

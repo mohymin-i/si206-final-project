@@ -1,0 +1,194 @@
+[
+  {
+    "DateTime": "2025-04-19T16:00:00-05:00",
+    "EpochDateTime": 1745096400,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 52.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 2,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=16&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=16&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T17:00:00-05:00",
+    "EpochDateTime": 1745100000,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 51.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 2,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=17&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=17&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T18:00:00-05:00",
+    "EpochDateTime": 1745103600,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 49.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 2,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=18&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=18&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T19:00:00-05:00",
+    "EpochDateTime": 1745107200,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": true,
+    "Temperature": {
+      "Value": 48.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 1,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=19&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=19&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T20:00:00-05:00",
+    "EpochDateTime": 1745110800,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 46.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=20&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=20&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T21:00:00-05:00",
+    "EpochDateTime": 1745114400,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 46.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=21&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=21&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T22:00:00-05:00",
+    "EpochDateTime": 1745118000,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 46.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=22&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=22&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-19T23:00:00-05:00",
+    "EpochDateTime": 1745121600,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 46.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=23&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=23&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-20T00:00:00-05:00",
+    "EpochDateTime": 1745125200,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 45.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=0&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=0&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-20T01:00:00-05:00",
+    "EpochDateTime": 1745128800,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 45.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=1&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=1&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-20T02:00:00-05:00",
+    "EpochDateTime": 1745132400,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 45.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=2&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=2&lang=en-us"
+  },
+  {
+    "DateTime": "2025-04-20T03:00:00-05:00",
+    "EpochDateTime": 1745136000,
+    "WeatherIcon": 7,
+    "IconPhrase": "Cloudy",
+    "HasPrecipitation": false,
+    "IsDaylight": false,
+    "Temperature": {
+      "Value": 45.0,
+      "Unit": "F",
+      "UnitType": 18
+    },
+    "PrecipitationProbability": 0,
+    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=3&lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=3&lang=en-us"
+  }
+]

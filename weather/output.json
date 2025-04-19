@@ -1,58 +1,95 @@
 {
   "Headline": {
-    "EffectiveDate": "2025-04-19T08:00:00-07:00",
-    "EffectiveEpochDate": 1745074800,
-    "Severity": 4,
-    "Text": "Pleasant this weekend",
-    "Category": "mild",
-    "EndDate": null,
-    "EndEpochDate": null,
-    "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?lang=en-us"
+    "EffectiveDate": "2025-04-19T14:00:00-05:00",
+    "EffectiveEpochDate": 1745089200,
+    "Severity": 2,
+    "Text": "Thunderstorms, some heavy, this afternoon through tomorrow afternoon",
+    "Category": "thunderstorm",
+    "EndDate": "2025-04-20T20:00:00-05:00",
+    "EndEpochDate": 1745197200,
+    "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?lang=en-us",
+    "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?lang=en-us"
   },
   "DailyForecasts": [
     {
-      "Date": "2025-04-18T07:00:00-07:00",
-      "EpochDate": 1744984800,
+      "Date": "2025-04-19T07:00:00-05:00",
+      "EpochDate": 1745064000,
       "Temperature": {
         "Minimum": {
-          "Value": 52.0,
+          "Value": 68.0,
           "Unit": "F",
           "UnitType": 18
         },
         "Maximum": {
-          "Value": 64.0,
+          "Value": 78.0,
           "Unit": "F",
           "UnitType": 18
         }
       },
       "Day": {
-        "Icon": 6,
-        "IconPhrase": "Mostly cloudy",
-        "HasPrecipitation": false
+        "Icon": 15,
+        "IconPhrase": "Thunderstorms",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Heavy"
       },
       "Night": {
-        "Icon": 35,
-        "IconPhrase": "Partly cloudy",
+        "Icon": 41,
+        "IconPhrase": "Partly cloudy w/ t-storms",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Moderate"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=1&lang=en-us",
+      "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=1&lang=en-us"
+    },
+    {
+      "Date": "2025-04-20T07:00:00-05:00",
+      "EpochDate": 1745150400,
+      "Temperature": {
+        "Minimum": {
+          "Value": 55.0,
+          "Unit": "F",
+          "UnitType": 18
+        },
+        "Maximum": {
+          "Value": 78.0,
+          "Unit": "F",
+          "UnitType": 18
+        }
+      },
+      "Day": {
+        "Icon": 16,
+        "IconPhrase": "Mostly cloudy w/ t-storms",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Moderate"
+      },
+      "Night": {
+        "Icon": 33,
+        "IconPhrase": "Clear",
         "HasPrecipitation": false
       },
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=1&lang=en-us",
-      "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=1&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=2&lang=en-us",
+      "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=2&lang=en-us"
     },
     {
-      "Date": "2025-04-19T07:00:00-07:00",
-      "EpochDate": 1745071200,
+      "Date": "2025-04-21T07:00:00-05:00",
+      "EpochDate": 1745236800,
       "Temperature": {
         "Minimum": {
-          "Value": 54.0,
+          "Value": 60.0,
           "Unit": "F",
           "UnitType": 18
         },
         "Maximum": {
-          "Value": 72.0,
+          "Value": 81.0,
           "Unit": "F",
           "UnitType": 18
         }
@@ -70,82 +107,20 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=2&lang=en-us",
-      "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=2&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=3&lang=en-us",
+      "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=3&lang=en-us"
     },
     {
-      "Date": "2025-04-20T07:00:00-07:00",
-      "EpochDate": 1745157600,
+      "Date": "2025-04-22T07:00:00-05:00",
+      "EpochDate": 1745323200,
       "Temperature": {
         "Minimum": {
-          "Value": 55.0,
+          "Value": 65.0,
           "Unit": "F",
           "UnitType": 18
         },
         "Maximum": {
-          "Value": 72.0,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 1,
-        "IconPhrase": "Sunny",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 34,
-        "IconPhrase": "Mostly clear",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=3&lang=en-us",
-      "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=3&lang=en-us"
-    },
-    {
-      "Date": "2025-04-21T07:00:00-07:00",
-      "EpochDate": 1745244000,
-      "Temperature": {
-        "Minimum": {
-          "Value": 54.0,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 71.0,
-          "Unit": "F",
-          "UnitType": 18
-        }
-      },
-      "Day": {
-        "Icon": 3,
-        "IconPhrase": "Partly sunny",
-        "HasPrecipitation": false
-      },
-      "Night": {
-        "Icon": 38,
-        "IconPhrase": "Mostly cloudy",
-        "HasPrecipitation": false
-      },
-      "Sources": [
-        "AccuWeather"
-      ],
-      "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=4&lang=en-us",
-      "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=4&lang=en-us"
-    },
-    {
-      "Date": "2025-04-22T07:00:00-07:00",
-      "EpochDate": 1745330400,
-      "Temperature": {
-        "Minimum": {
-          "Value": 55.0,
-          "Unit": "F",
-          "UnitType": 18
-        },
-        "Maximum": {
-          "Value": 70.0,
+          "Value": 85.0,
           "Unit": "F",
           "UnitType": 18
         }
@@ -163,8 +138,43 @@
       "Sources": [
         "AccuWeather"
       ],
-      "MobileLink": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=5&lang=en-us",
-      "Link": "http://www.accuweather.com/en/us/los-angeles-ca/90012/daily-weather-forecast/347625?day=5&lang=en-us"
+      "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=4&lang=en-us",
+      "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=4&lang=en-us"
+    },
+    {
+      "Date": "2025-04-23T07:00:00-05:00",
+      "EpochDate": 1745409600,
+      "Temperature": {
+        "Minimum": {
+          "Value": 67.0,
+          "Unit": "F",
+          "UnitType": 18
+        },
+        "Maximum": {
+          "Value": 75.0,
+          "Unit": "F",
+          "UnitType": 18
+        }
+      },
+      "Day": {
+        "Icon": 15,
+        "IconPhrase": "Thunderstorms",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Moderate"
+      },
+      "Night": {
+        "Icon": 15,
+        "IconPhrase": "Thunderstorms",
+        "HasPrecipitation": true,
+        "PrecipitationType": "Rain",
+        "PrecipitationIntensity": "Light"
+      },
+      "Sources": [
+        "AccuWeather"
+      ],
+      "MobileLink": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=5&lang=en-us",
+      "Link": "http://www.accuweather.com/en/us/dallas-tx/75202/daily-weather-forecast/351194?day=5&lang=en-us"
     }
   ]
 }

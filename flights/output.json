@@ -1,8 +1,8 @@
 {
   "meta": {
-    "count": 3,
+    "count": 4,
     "links": {
-      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=JFK&destinationLocationCode=ATL&departureDate=2025-09-06&adults=1&nonStop=true&max=10"
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DTW&destinationLocationCode=SEA&departureDate=2025-05-05&adults=1&nonStop=true&max=10&currencyCode=USD"
     }
   },
   "data": [
@@ -14,33 +14,32 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-04-19",
-      "lastTicketingDateTime": "2025-04-19",
+      "lastTicketingDate": "2025-04-20",
+      "lastTicketingDateTime": "2025-04-20",
       "numberOfBookableSeats": 7,
       "itineraries": [
         {
-          "duration": "PT2H30M",
+          "duration": "PT4H57M",
           "segments": [
             {
               "departure": {
-                "iataCode": "JFK",
-                "terminal": "5",
-                "at": "2025-09-06T08:15:00"
+                "iataCode": "DTW",
+                "terminal": "E",
+                "at": "2025-05-05T07:00:00"
               },
               "arrival": {
-                "iataCode": "ATL",
-                "terminal": "N",
-                "at": "2025-09-06T10:45:00"
+                "iataCode": "SEA",
+                "at": "2025-05-05T08:57:00"
               },
-              "carrierCode": "B6",
-              "number": "519",
+              "carrierCode": "AS",
+              "number": "381",
               "aircraft": {
-                "code": "223"
+                "code": "73J"
               },
               "operating": {
-                "carrierCode": "B6"
+                "carrierCode": "AS"
               },
-              "duration": "PT2H30M",
+              "duration": "PT4H57M",
               "id": "1",
               "numberOfStops": 0,
               "blacklistedInEU": false
@@ -49,9 +48,9 @@
         }
       ],
       "price": {
-        "currency": "EUR",
-        "total": "95.14",
-        "base": "76.00",
+        "currency": "USD",
+        "total": "263.30",
+        "base": "230.70",
         "fees": [
           {
             "amount": "0.00",
@@ -62,13 +61,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "95.14",
-        "additionalServices": [
-          {
-            "amount": "30.72",
-            "type": "CHECKED_BAGS"
-          }
-        ]
+        "grandTotal": "263.30"
       },
       "pricingOptions": {
         "fareType": [
@@ -77,7 +70,7 @@
         "includedCheckedBagsOnly": false
       },
       "validatingAirlineCodes": [
-        "B6"
+        "AS"
       ],
       "travelerPricings": [
         {
@@ -85,18 +78,18 @@
           "fareOption": "STANDARD",
           "travelerType": "ADULT",
           "price": {
-            "currency": "EUR",
-            "total": "95.14",
-            "base": "76.00"
+            "currency": "USD",
+            "total": "263.30",
+            "base": "230.70"
           },
           "fareDetailsBySegment": [
             {
               "segmentId": "1",
               "cabin": "ECONOMY",
-              "fareBasis": "UI2AUEL1",
-              "brandedFare": "DN",
-              "brandedFareLabel": "BLUE BASIC",
-              "class": "L",
+              "fareBasis": "VH4OAVBN",
+              "brandedFare": "SV",
+              "brandedFareLabel": "SAVER",
+              "class": "X",
               "includedCheckedBags": {
                 "quantity": 0
               },
@@ -105,7 +98,7 @@
               },
               "amenities": [
                 {
-                  "description": "CHECKED BAG FIRST",
+                  "description": "STANDARD PIECE MAX 50LB 62LI",
                   "isChargeable": true,
                   "amenityType": "BAGGAGE",
                   "amenityProvider": {
@@ -113,49 +106,25 @@
                   }
                 },
                 {
-                  "description": "CHECKED BAG SECOND",
+                  "description": "MEAL 1",
                   "isChargeable": true,
-                  "amenityType": "BAGGAGE",
+                  "amenityType": "MEAL",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "EXTRA LEGROOM",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "ADVANCE SEAT SELECTION",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "SNACK",
+                  "description": "110V AC POWER",
                   "isChargeable": false,
-                  "amenityType": "MEAL",
+                  "amenityType": "ENTERTAINMENT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "ALCOHOLIC DRINK",
-                  "isChargeable": true,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "NON ALCOHOLIC DRINK",
+                  "description": "USB POWER",
                   "isChargeable": false,
-                  "amenityType": "MEAL",
+                  "amenityType": "ENTERTAINMENT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
@@ -174,34 +143,33 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-04-19",
-      "lastTicketingDateTime": "2025-04-19",
+      "lastTicketingDate": "2025-04-20",
+      "lastTicketingDateTime": "2025-04-20",
       "numberOfBookableSeats": 7,
       "itineraries": [
         {
-          "duration": "PT2H30M",
+          "duration": "PT4H57M",
           "segments": [
             {
               "departure": {
-                "iataCode": "JFK",
-                "terminal": "5",
-                "at": "2025-09-06T21:40:00"
+                "iataCode": "DTW",
+                "terminal": "E",
+                "at": "2025-05-05T17:13:00"
               },
               "arrival": {
-                "iataCode": "ATL",
-                "terminal": "N",
-                "at": "2025-09-07T00:10:00"
+                "iataCode": "SEA",
+                "at": "2025-05-05T19:10:00"
               },
-              "carrierCode": "B6",
-              "number": "719",
+              "carrierCode": "AS",
+              "number": "313",
               "aircraft": {
-                "code": "223"
+                "code": "7M9"
               },
               "operating": {
-                "carrierCode": "B6"
+                "carrierCode": "AS"
               },
-              "duration": "PT2H30M",
-              "id": "2",
+              "duration": "PT4H57M",
+              "id": "3",
               "numberOfStops": 0,
               "blacklistedInEU": false
             }
@@ -209,9 +177,9 @@
         }
       ],
       "price": {
-        "currency": "EUR",
-        "total": "95.14",
-        "base": "76.00",
+        "currency": "USD",
+        "total": "263.30",
+        "base": "230.70",
         "fees": [
           {
             "amount": "0.00",
@@ -222,13 +190,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "95.14",
-        "additionalServices": [
-          {
-            "amount": "30.72",
-            "type": "CHECKED_BAGS"
-          }
-        ]
+        "grandTotal": "263.30"
       },
       "pricingOptions": {
         "fareType": [
@@ -237,7 +199,7 @@
         "includedCheckedBagsOnly": false
       },
       "validatingAirlineCodes": [
-        "B6"
+        "AS"
       ],
       "travelerPricings": [
         {
@@ -245,18 +207,18 @@
           "fareOption": "STANDARD",
           "travelerType": "ADULT",
           "price": {
-            "currency": "EUR",
-            "total": "95.14",
-            "base": "76.00"
+            "currency": "USD",
+            "total": "263.30",
+            "base": "230.70"
           },
           "fareDetailsBySegment": [
             {
-              "segmentId": "2",
+              "segmentId": "3",
               "cabin": "ECONOMY",
-              "fareBasis": "UI2AUEL1",
-              "brandedFare": "DN",
-              "brandedFareLabel": "BLUE BASIC",
-              "class": "L",
+              "fareBasis": "VH4OAVBN",
+              "brandedFare": "SV",
+              "brandedFareLabel": "SAVER",
+              "class": "X",
               "includedCheckedBags": {
                 "quantity": 0
               },
@@ -265,7 +227,7 @@
               },
               "amenities": [
                 {
-                  "description": "CHECKED BAG FIRST",
+                  "description": "STANDARD PIECE MAX 50LB 62LI",
                   "isChargeable": true,
                   "amenityType": "BAGGAGE",
                   "amenityProvider": {
@@ -273,49 +235,25 @@
                   }
                 },
                 {
-                  "description": "CHECKED BAG SECOND",
+                  "description": "MEAL 1",
                   "isChargeable": true,
-                  "amenityType": "BAGGAGE",
+                  "amenityType": "MEAL",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "EXTRA LEGROOM",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "ADVANCE SEAT SELECTION",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "SNACK",
+                  "description": "110V AC POWER",
                   "isChargeable": false,
-                  "amenityType": "MEAL",
+                  "amenityType": "ENTERTAINMENT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
                 },
                 {
-                  "description": "ALCOHOLIC DRINK",
-                  "isChargeable": true,
-                  "amenityType": "MEAL",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "NON ALCOHOLIC DRINK",
+                  "description": "USB POWER",
                   "isChargeable": false,
-                  "amenityType": "MEAL",
+                  "amenityType": "ENTERTAINMENT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
@@ -334,34 +272,33 @@
       "nonHomogeneous": false,
       "oneWay": false,
       "isUpsellOffer": false,
-      "lastTicketingDate": "2025-04-19",
-      "lastTicketingDateTime": "2025-04-19",
+      "lastTicketingDate": "2025-04-20",
+      "lastTicketingDateTime": "2025-04-20",
       "numberOfBookableSeats": 7,
       "itineraries": [
         {
-          "duration": "PT2H41M",
+          "duration": "PT4H57M",
           "segments": [
             {
               "departure": {
-                "iataCode": "JFK",
-                "terminal": "5",
-                "at": "2025-09-06T12:55:00"
+                "iataCode": "DTW",
+                "terminal": "E",
+                "at": "2025-05-05T07:00:00"
               },
               "arrival": {
-                "iataCode": "ATL",
-                "terminal": "N",
-                "at": "2025-09-06T15:36:00"
+                "iataCode": "SEA",
+                "at": "2025-05-05T08:57:00"
               },
-              "carrierCode": "B6",
-              "number": "419",
+              "carrierCode": "HA",
+              "number": "4882",
               "aircraft": {
-                "code": "223"
+                "code": "737"
               },
               "operating": {
-                "carrierCode": "B6"
+                "carrierCode": "AS"
               },
-              "duration": "PT2H41M",
-              "id": "3",
+              "duration": "PT4H57M",
+              "id": "2",
               "numberOfStops": 0,
               "blacklistedInEU": false
             }
@@ -369,9 +306,9 @@
         }
       ],
       "price": {
-        "currency": "EUR",
-        "total": "95.14",
-        "base": "76.00",
+        "currency": "USD",
+        "total": "263.30",
+        "base": "230.70",
         "fees": [
           {
             "amount": "0.00",
@@ -382,13 +319,7 @@
             "type": "TICKETING"
           }
         ],
-        "grandTotal": "95.14",
-        "additionalServices": [
-          {
-            "amount": "30.72",
-            "type": "CHECKED_BAGS"
-          }
-        ]
+        "grandTotal": "263.30"
       },
       "pricingOptions": {
         "fareType": [
@@ -397,7 +328,7 @@
         "includedCheckedBagsOnly": false
       },
       "validatingAirlineCodes": [
-        "B6"
+        "HA"
       ],
       "travelerPricings": [
         {
@@ -405,18 +336,18 @@
           "fareOption": "STANDARD",
           "travelerType": "ADULT",
           "price": {
-            "currency": "EUR",
-            "total": "95.14",
-            "base": "76.00"
+            "currency": "USD",
+            "total": "263.30",
+            "base": "230.70"
           },
           "fareDetailsBySegment": [
             {
-              "segmentId": "3",
+              "segmentId": "2",
               "cabin": "ECONOMY",
-              "fareBasis": "UI2AUEL1",
-              "brandedFare": "DN",
-              "brandedFareLabel": "BLUE BASIC",
-              "class": "L",
+              "fareBasis": "HH4OAVBN",
+              "brandedFare": "MB",
+              "brandedFareLabel": "MAIN CABIN BASIC",
+              "class": "U",
               "includedCheckedBags": {
                 "quantity": 0
               },
@@ -425,33 +356,9 @@
               },
               "amenities": [
                 {
-                  "description": "CHECKED BAG FIRST",
+                  "description": "UPTO50LB 23KG AND62LI 158LCM",
                   "isChargeable": true,
                   "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "CHECKED BAG SECOND",
-                  "isChargeable": true,
-                  "amenityType": "BAGGAGE",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "EXTRA LEGROOM",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
-                  "amenityProvider": {
-                    "name": "BrandedFare"
-                  }
-                },
-                {
-                  "description": "ADVANCE SEAT SELECTION",
-                  "isChargeable": true,
-                  "amenityType": "PRE_RESERVED_SEAT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
@@ -473,9 +380,170 @@
                   }
                 },
                 {
-                  "description": "NON ALCOHOLIC DRINK",
+                  "description": "BEVERAGE",
                   "isChargeable": false,
                   "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "4",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-20",
+      "lastTicketingDateTime": "2025-04-20",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT4H57M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "DTW",
+                "terminal": "E",
+                "at": "2025-05-05T17:13:00"
+              },
+              "arrival": {
+                "iataCode": "SEA",
+                "at": "2025-05-05T19:10:00"
+              },
+              "carrierCode": "HA",
+              "number": "4881",
+              "aircraft": {
+                "code": "7M9"
+              },
+              "operating": {
+                "carrierCode": "AS"
+              },
+              "duration": "PT4H57M",
+              "id": "4",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "263.30",
+        "base": "230.70",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "263.30"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "HA"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "263.30",
+            "base": "230.70"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "4",
+              "cabin": "ECONOMY",
+              "fareBasis": "HH4OAVBN",
+              "brandedFare": "MB",
+              "brandedFareLabel": "MAIN CABIN BASIC",
+              "class": "U",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "UPTO50LB 23KG AND62LI 158LCM",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "BEVERAGE",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
                   "amenityProvider": {
                     "name": "BrandedFare"
                   }
@@ -489,23 +557,26 @@
   ],
   "dictionaries": {
     "locations": {
-      "ATL": {
-        "cityCode": "ATL",
+      "DTW": {
+        "cityCode": "DTT",
         "countryCode": "US"
       },
-      "JFK": {
-        "cityCode": "NYC",
+      "SEA": {
+        "cityCode": "SEA",
         "countryCode": "US"
       }
     },
     "aircraft": {
-      "223": "AIRBUS  A220-300"
+      "7M9": "BOEING 737 MAX 9",
+      "737": "BOEING 737 ALL SERIES PASSENGER",
+      "73J": "BOEING 737-900"
     },
     "currencies": {
-      "EUR": "EURO"
+      "USD": "US DOLLAR"
     },
     "carriers": {
-      "B6": "JETBLUE AIRWAYS"
+      "AS": "ALASKA AIRLINES",
+      "HA": "HAWAIIAN AIRLINES"
     }
   }
 }

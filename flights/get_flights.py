@@ -14,10 +14,11 @@ def main(depart, arrive, date):
     "departureDate": date,
     "adults": 1,
     "nonStop": "true",
-    "max": 10
+    "max": 10,
+    "currencyCode": "USD"
     }
     headers = {
-    'Authorization': f'Bearer {os.getnev("AMEDUS_BEARER_TOKEN")}'
+    'Authorization': f'Bearer {os.getenv("AMEDUS_BEARER_TOKEN")}'
     }
 
     response = requests.get(url, params=params, headers=headers)

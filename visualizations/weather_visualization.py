@@ -39,6 +39,7 @@ def get_weather_min_max():
     ax.set_ylabel("Temperature (°F)")
     ax.legend()
     ax.grid(True)
+    plt.savefig("weather_visualization.png")
     plt.show()
 
 get_weather_min_max()

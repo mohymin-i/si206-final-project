@@ -4,7 +4,6 @@ import os
 
 
 def main():
-    
     # load the json
     here = os.path.dirname(__file__)
     flightPath = os.path.join(here, 'output.json')
@@ -29,7 +28,6 @@ def main():
       );""")
     conn.commit()
 
-    # Get 
     for offer in flights.get('data', []):
         offerID = offer.get('id')
         price = float(offer.get('price', {}).get('total', 0))
@@ -38,6 +36,7 @@ def main():
             # skip over non direct flights
             if len(itinerary.get('segments', [])) != 1:
                 continue
+
             seg = itinerary['segments'][0]
             departureTime = seg['departure']['at']
             departureLocation = seg['departure']['iataCode']

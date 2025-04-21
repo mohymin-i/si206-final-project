@@ -7,9 +7,9 @@ from dotenv import load_dotenv
 
 
 # Amedus (flights)
-# AMEDUS_BEARER_TOKEN="rn4u0EhzVFW8F1E8WDD69pBaTjwU"
-# AMEDUS_API_KEY="4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8"
-# AMEDUS_API_SECRET="f2PN9OPUyXrDiIQr"
+AMEDUS_BEARER_TOKEN="rn4u0EhzVFW8F1E8WDD69pBaTjwU"
+AMEDUS_API_KEY="4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8"
+AMEDUS_API_SECRET="f2PN9OPUyXrDiIQr"
 
 def main(depart, arrive, date):
     load_dotenv()

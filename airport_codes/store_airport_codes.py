@@ -34,11 +34,11 @@ def main():
         # some cities may have multiple airports
         # alexandria, Egypt, for instance has airports ALY and HBE
         for code, country in entries:
-            code_clean = clean(code)
-            country_clean = clean(country)
+            cleanedCode = clean(code)
+            cleanedCountry = clean(country)
             curr.execute(
                 'INSERT OR REPLACE INTO airports (iata_code, city, country) VALUES (?, ?, ?)',
-                (code_clean, city_clean, country_clean)
+                (cleanedCode, city_clean, cleanedCountry)
             )
             count += 1
 

@@ -5,6 +5,12 @@ import sys
 import os
 from dotenv import load_dotenv
 
+
+# Amedus (flights)
+# AMEDUS_BEARER_TOKEN="rn4u0EhzVFW8F1E8WDD69pBaTjwU"
+# AMEDUS_API_KEY="4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8"
+# AMEDUS_API_SECRET="f2PN9OPUyXrDiIQr"
+
 def main(depart, arrive, date):
     load_dotenv()
     url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
@@ -18,7 +24,7 @@ def main(depart, arrive, date):
     "currencyCode": "USD"
     }
     headers = {
-    'Authorization': f'Bearer {os.getenv("AMEDUS_BEARER_TOKEN")}' # mispelled AMADEUS lol
+    'Authorization': f'Bearer {AMEDUS_BEARER_TOKEN}' # mispelled AMADEUS lol
     }
 
     response = requests.get(url, params=params, headers=headers)

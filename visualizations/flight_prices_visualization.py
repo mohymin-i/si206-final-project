@@ -3,6 +3,7 @@ import sqlite3
 import pandas as pd
 import os
 from datetime import datetime, timedelta
+from dotenv import load_dotenv
 
 def visualize_average_flight_prices():
     conn = sqlite3.connect("flights/flight_offers.db")
@@ -24,6 +25,8 @@ def visualize_average_flight_prices():
 
     # Create the line graph
     fig, ax = plt.subplots()
+    print(dates)
+    print(prices)
     ax.plot(dates, prices, label="Avg. Price", marker='o', color="green")
 
     for date, price in zip(dates, prices):

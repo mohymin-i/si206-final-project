@@ -6,7 +6,7 @@ import os
 def main():
     # load the json
     here = os.path.dirname(__file__)
-    flightPath = os.path.join(here, 'output.json')
+    flightPath = os.path.join(here, '../utilities/output.json')
     # I had trouble running it from the main directory, this solves that issue
 
     with open(flightPath, 'r', encoding='utf-8') as f:

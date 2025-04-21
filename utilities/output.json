@@ -1,194 +1,582 @@
-[
-  {
-    "DateTime": "2025-04-19T16:00:00-05:00",
-    "EpochDateTime": 1745096400,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": true,
-    "Temperature": {
-      "Value": 52.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 2,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=16&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=16&lang=en-us"
+{
+  "meta": {
+    "count": 4,
+    "links": {
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=ATL&destinationLocationCode=SEA&departureDate=2025-04-26&adults=1&nonStop=true&max=10&currencyCode=USD"
+    }
   },
-  {
-    "DateTime": "2025-04-19T17:00:00-05:00",
-    "EpochDateTime": 1745100000,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": true,
-    "Temperature": {
-      "Value": 51.0,
-      "Unit": "F",
-      "UnitType": 18
+  "data": [
+    {
+      "type": "flight-offer",
+      "id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-21",
+      "lastTicketingDateTime": "2025-04-21",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT5H31M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-04-26T08:00:00"
+              },
+              "arrival": {
+                "iataCode": "SEA",
+                "at": "2025-04-26T10:31:00"
+              },
+              "carrierCode": "AS",
+              "number": "377",
+              "aircraft": {
+                "code": "73H"
+              },
+              "operating": {
+                "carrierCode": "AS"
+              },
+              "duration": "PT5H31M",
+              "id": "1",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "448.29",
+        "base": "402.79",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "448.29"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "AS"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "448.29",
+            "base": "402.79"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "1",
+              "cabin": "ECONOMY",
+              "fareBasis": "MH0OAVBN",
+              "brandedFare": "SV",
+              "brandedFareLabel": "SAVER",
+              "class": "X",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "STANDARD PIECE MAX 50LB 62LI",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "110V AC POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    "PrecipitationProbability": 2,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=17&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=17&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T18:00:00-05:00",
-    "EpochDateTime": 1745103600,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": true,
-    "Temperature": {
-      "Value": 49.0,
-      "Unit": "F",
-      "UnitType": 18
+    {
+      "type": "flight-offer",
+      "id": "2",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-21",
+      "lastTicketingDateTime": "2025-04-21",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT5H33M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-04-26T17:53:00"
+              },
+              "arrival": {
+                "iataCode": "SEA",
+                "at": "2025-04-26T20:26:00"
+              },
+              "carrierCode": "AS",
+              "number": "334",
+              "aircraft": {
+                "code": "7M9"
+              },
+              "operating": {
+                "carrierCode": "AS"
+              },
+              "duration": "PT5H33M",
+              "id": "3",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "448.29",
+        "base": "402.79",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "448.29"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "AS"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "448.29",
+            "base": "402.79"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "3",
+              "cabin": "ECONOMY",
+              "fareBasis": "MH0OAVBN",
+              "brandedFare": "SV",
+              "brandedFareLabel": "SAVER",
+              "class": "X",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "STANDARD PIECE MAX 50LB 62LI",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "110V AC POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    "PrecipitationProbability": 2,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=18&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=18&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T19:00:00-05:00",
-    "EpochDateTime": 1745107200,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": true,
-    "Temperature": {
-      "Value": 48.0,
-      "Unit": "F",
-      "UnitType": 18
+    {
+      "type": "flight-offer",
+      "id": "3",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-21",
+      "lastTicketingDateTime": "2025-04-21",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT5H31M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-04-26T08:00:00"
+              },
+              "arrival": {
+                "iataCode": "SEA",
+                "at": "2025-04-26T10:31:00"
+              },
+              "carrierCode": "HA",
+              "number": "4729",
+              "aircraft": {
+                "code": "737"
+              },
+              "operating": {
+                "carrierCode": "AS"
+              },
+              "duration": "PT5H31M",
+              "id": "2",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "448.29",
+        "base": "402.79",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "448.29"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "HA"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "448.29",
+            "base": "402.79"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "2",
+              "cabin": "ECONOMY",
+              "fareBasis": "NH0OAVBN",
+              "brandedFare": "MB",
+              "brandedFareLabel": "MAIN CABIN BASIC",
+              "class": "U",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "UPTO50LB 23KG AND62LI 158LCM",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "BEVERAGE",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
-    "PrecipitationProbability": 1,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=19&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=19&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T20:00:00-05:00",
-    "EpochDateTime": 1745110800,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 46.0,
-      "Unit": "F",
-      "UnitType": 18
+    {
+      "type": "flight-offer",
+      "id": "4",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-21",
+      "lastTicketingDateTime": "2025-04-21",
+      "numberOfBookableSeats": 7,
+      "itineraries": [
+        {
+          "duration": "PT5H33M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "ATL",
+                "terminal": "N",
+                "at": "2025-04-26T17:53:00"
+              },
+              "arrival": {
+                "iataCode": "SEA",
+                "at": "2025-04-26T20:26:00"
+              },
+              "carrierCode": "HA",
+              "number": "4762",
+              "aircraft": {
+                "code": "7M9"
+              },
+              "operating": {
+                "carrierCode": "AS"
+              },
+              "duration": "PT5H33M",
+              "id": "4",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "448.29",
+        "base": "402.79",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "448.29"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "HA"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "448.29",
+            "base": "402.79"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "4",
+              "cabin": "ECONOMY",
+              "fareBasis": "NH0OAVBN",
+              "brandedFare": "MB",
+              "brandedFareLabel": "MAIN CABIN BASIC",
+              "class": "U",
+              "includedCheckedBags": {
+                "quantity": 0
+              },
+              "includedCabinBags": {
+                "quantity": 2
+              },
+              "amenities": [
+                {
+                  "description": "UPTO50LB 23KG AND62LI 158LCM",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SNACK",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ALCOHOLIC DRINK",
+                  "isChargeable": true,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "BEVERAGE",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL 1",
+                  "isChargeable": false,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "USB POWER",
+                  "isChargeable": false,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dictionaries": {
+    "locations": {
+      "ATL": {
+        "cityCode": "ATL",
+        "countryCode": "US"
+      },
+      "SEA": {
+        "cityCode": "SEA",
+        "countryCode": "US"
+      }
     },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=20&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=20&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T21:00:00-05:00",
-    "EpochDateTime": 1745114400,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 46.0,
-      "Unit": "F",
-      "UnitType": 18
+    "aircraft": {
+      "7M9": "BOEING 737 MAX 9",
+      "737": "BOEING 737 ALL SERIES PASSENGER",
+      "73H": "BOEING 737-800 (WINGLETS)"
     },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=21&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=21&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T22:00:00-05:00",
-    "EpochDateTime": 1745118000,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 46.0,
-      "Unit": "F",
-      "UnitType": 18
+    "currencies": {
+      "USD": "US DOLLAR"
     },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=22&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=22&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-19T23:00:00-05:00",
-    "EpochDateTime": 1745121600,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 46.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=23&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=1&hbhhour=23&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-20T00:00:00-05:00",
-    "EpochDateTime": 1745125200,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 45.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=0&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=0&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-20T01:00:00-05:00",
-    "EpochDateTime": 1745128800,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 45.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=1&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=1&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-20T02:00:00-05:00",
-    "EpochDateTime": 1745132400,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 45.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=2&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=2&lang=en-us"
-  },
-  {
-    "DateTime": "2025-04-20T03:00:00-05:00",
-    "EpochDateTime": 1745136000,
-    "WeatherIcon": 7,
-    "IconPhrase": "Cloudy",
-    "HasPrecipitation": false,
-    "IsDaylight": false,
-    "Temperature": {
-      "Value": 45.0,
-      "Unit": "F",
-      "UnitType": 18
-    },
-    "PrecipitationProbability": 0,
-    "MobileLink": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=3&lang=en-us",
-    "Link": "http://www.accuweather.com/en/us/chicago-il/60608/hourly-weather-forecast/348308?day=2&hbhhour=3&lang=en-us"
+    "carriers": {
+      "AS": "ALASKA AIRLINES",
+      "HA": "HAWAIIAN AIRLINES"
+    }
   }
-]
+}

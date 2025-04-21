@@ -1,35 +1,40 @@
 import matplotlib.pyplot as plt
-import json
+import sqlite3
+import pandas as pd
+import os
+from datetime import datetime, timedelta
 
-# Average flight prices for 5 days for a certain destination
+def visualize_average_flight_prices():
+    conn = sqlite3.connect("flights/flight_offers.db")
 
-def get_flight_prices(table, conn):
-    #load json data
-    with open('output.json', 'r') as f:
-        flight_data = json.load(f)
-    
-    prices = flight_data["price"]
-
-    for entry in flight_data:
-        insert_query = f"""INSERT INTO {table} (flight, price, origin, destination)
-        VALUES (?, ?, ?, ?)
+    # Get date and average price
+    query = """
+    SELECT date(depart_time) AS flight_date, AVG(price_total) AS avg_price
+    FROM offers
+    GROUP BY flight_date
+    ORDER BY flight_date
+    LIMIT 5
     """
-
-        cursor.execute(insert_query, (
-            entry["flight"],
-            entry["price"],
-            entry["origin"],
-            entry["destination"]
-        ))
     
-    flight_names = [flight['flight'] for flight in flight_data]
-    flight_prices = [flight['price'] for flight in flight_data]
+    df = pd.read_sql_query(query, conn)
+    conn.close()
 
-    plt.figure(figsize=(8,5))
-    plt.hist(flight_prices, bins=10, color="blue", edgecolor = "black")
-    plt.title("Distribution of Flight Prices")
-    plt.xlabel("Price ($)")
-    plt.ylabel("Number of Flights")
-    plt.grid(axis='y', linestyle="--", alpha=0.7)
-    plt.tight_layout()
+    dates = df['flight_date']
+    prices = df['avg_price']
+
+    # Create the line graph
+    fig, ax = plt.subplots()
+    ax.plot(dates, prices, label="Avg. Price", marker='o', color="green")
+
+    for date, price in zip(dates, prices):
+        ax.text(date, price + 5, f"${price:.2f}", ha='center', fontsize=9)
+    ax.set_title("Average Flight Prices Over 5 Days")
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price ($)")
+    ax.grid(True)
+    ax.legend()
+    fig.autofmt_xdate()
+    plt.savefig("flight_prices_visualization.png")
     plt.show()
+
+visualize_average_flight_prices()

@@ -2,6 +2,12 @@ import json
 import sqlite3
 import os
 
+def iataToInt(iata):
+    integerKey = 0
+    for char in iata[:3]:
+        integerKey *= 100
+        integerKey += ord(char)
+    return integerKey
 
 def main():
     # load the json
@@ -21,8 +27,10 @@ def main():
         offer_id     TEXT,
         depart_time  TEXT,
         depart_iata  TEXT,
+        depart_key   INTEGER,
         arrival_time TEXT,
         arrival_iata TEXT,
+        arrival_key  INTEGER,
         price_total  REAL,
         PRIMARY KEY(offer_id, depart_time)
       );""")
@@ -45,9 +53,9 @@ def main():
 
             curr.execute(
               "INSERT OR REPLACE INTO offers "
-              "(offer_id, depart_time, depart_iata, arrival_time, arrival_iata, price_total) "
-              "VALUES (?, ?, ?, ?, ?, ?)",
-              (offerID, departureTime, departureLocation, arrivalTime, destination, price))
+              "(offer_id, depart_time, depart_iata, depart_key, arrival_time, arrival_iata, arrival_key, price_total) "
+              "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+              (offerID, departureTime, departureLocation, iataToInt(departureLocation), arrivalTime, destination, iataToInt(destination), price))
 
     conn.commit()
     conn.close()

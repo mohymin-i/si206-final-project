@@ -6,6 +6,13 @@ def clean(airportName):
     # Cleans names, helper function
     return airportName.strip().strip("\u00a0")
 
+def iataToInt(iata):
+    integerKey = 0
+    for char in iata[:3]:
+        integerKey *= 100
+        integerKey += ord(char)
+    return integerKey
+
 def main():
     # get local path
     here = os.path.dirname(__file__)
@@ -22,6 +29,7 @@ def main():
     curr.execute('''
         CREATE TABLE IF NOT EXISTS airports (
             iata_code TEXT PRIMARY KEY,
+            integer_key INTEGER,
             city      TEXT NOT NULL,
             country   TEXT NOT NULL
         );''')
@@ -35,10 +43,10 @@ def main():
         # alexandria, Egypt, for instance has airports ALY and HBE
         for code, country in entries:
             cleanedCode = clean(code)
-            cleanedCountry = clean(country)
+            cleanedCountry = clean(country) 
             curr.execute(
-                'INSERT OR REPLACE INTO airports (iata_code, city, country) VALUES (?, ?, ?)',
-                (cleanedCode, city_clean, cleanedCountry)
+                'INSERT OR REPLACE INTO airports (iata_code, integer_key, city, country) VALUES (?, ?, ?, ?)',
+                (cleanedCode, iataToInt(cleanedCode), city_clean, cleanedCountry)
             )
             count += 1
 

@@ -18,7 +18,7 @@ def main(depart, arrive, date):
     "currencyCode": "USD"
     }
     headers = {
-    'Authorization': f'Bearer {os.getenv("AMEDUS_BEARER_TOKEN")}'
+    'Authorization': f'Bearer {os.getenv("AMEDUS_BEARER_TOKEN")}' # mispelled AMADEUS lol
     }
 
     response = requests.get(url, params=params, headers=headers)
@@ -28,6 +28,7 @@ def main(depart, arrive, date):
     with open("output.json", "w") as f:
         try:
             json.dump(data, f, indent=2)
+            print("Written to file")
         except Exception as e:
             print("failed to write response to file:", e)
 

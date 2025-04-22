@@ -1,10 +1,178 @@
 {
-  "errors": [
-    {
-      "code": 38192,
-      "title": "Access token expired",
-      "detail": "The access token is expired",
-      "status": 401
+  "meta": {
+    "count": 1,
+    "links": {
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=DFW&destinationLocationCode=BOS&departureDate=2025-06-01&adults=1&nonStop=true&max=10&currencyCode=USD"
     }
-  ]
+  },
+  "data": [
+    {
+      "type": "flight-offer",
+      "id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-22",
+      "lastTicketingDateTime": "2025-04-22",
+      "numberOfBookableSeats": 3,
+      "itineraries": [
+        {
+          "duration": "PT3H46M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "DFW",
+                "terminal": "E",
+                "at": "2025-06-01T07:14:00"
+              },
+              "arrival": {
+                "iataCode": "BOS",
+                "at": "2025-06-01T12:00:00"
+              },
+              "carrierCode": "F9",
+              "number": "3602",
+              "aircraft": {
+                "code": "32N"
+              },
+              "operating": {
+                "carrierCode": "F9"
+              },
+              "duration": "PT3H46M",
+              "id": "1",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "144.94",
+        "base": "120.64",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "144.94"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "F9"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "144.94",
+            "base": "120.64"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "1",
+              "cabin": "ECONOMY",
+              "fareBasis": "M14PXS5",
+              "brandedFare": "ECO",
+              "brandedFareLabel": "STANDARD",
+              "class": "M",
+              "amenities": [
+                {
+                  "description": "UPTO100LB 45KG BAGGAGE",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FIRST CHECKED BAG",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SECOND CHECKED BAG",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CARRY16KG 35LB UPTO46LI 118LCM",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRE RESERVED SEAT ASSIGNMENT",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRIORITY BOARDING",
+                  "isChargeable": true,
+                  "amenityType": "TRAVEL_SERVICES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dictionaries": {
+    "locations": {
+      "DFW": {
+        "cityCode": "DFW",
+        "countryCode": "US"
+      },
+      "BOS": {
+        "cityCode": "BOS",
+        "countryCode": "US"
+      }
+    },
+    "aircraft": {
+      "32N": "AIRBUS A320NEO"
+    },
+    "currencies": {
+      "USD": "US DOLLAR"
+    },
+    "carriers": {
+      "F9": "FRONTIER AIRLINES"
+    }
+  }
 }

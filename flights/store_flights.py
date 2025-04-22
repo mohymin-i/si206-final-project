@@ -24,6 +24,7 @@ def main():
     curr = conn.cursor()
     curr.execute("""
         CREATE TABLE IF NOT EXISTS offers (
+        id            INTEGER PRIMARY KEY AUTOINCREMENT,
         offer_id     TEXT,
         depart_time  TEXT,
         depart_iata  TEXT,
@@ -31,8 +32,7 @@ def main():
         arrival_time TEXT,
         arrival_iata TEXT,
         arrival_key  INTEGER,
-        price_total  REAL,
-        PRIMARY KEY(offer_id, depart_time)
+        price_total  REAL
       );""")
     conn.commit()
 
@@ -52,7 +52,7 @@ def main():
             destination = seg['arrival']['iataCode']
 
             curr.execute(
-              "INSERT OR REPLACE INTO offers "
+              "INSERT INTO offers "
               "(offer_id, depart_time, depart_iata, depart_key, arrival_time, arrival_iata, arrival_key, price_total) "
               "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
               (offerID, departureTime, departureLocation, iataToInt(departureLocation), arrivalTime, destination, iataToInt(destination), price))

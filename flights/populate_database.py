@@ -5,9 +5,7 @@ from datetime import date
 # Usage
 # run this code
 # change the airports list to get different flights
-
-# using this to store code
-
+# ignore 
 
 # routes we get data for
 def generateRoutes(airports):
@@ -40,8 +38,8 @@ def main():
         "LBR",
         "SEA",
         "FCO",
-        # "DEN",
-        # "MEX",
+        "DEN",
+        "MEX",
         # "SFO",
         # "ORD",
         # "YYZ",

@@ -25,19 +25,18 @@ def main():
     curr.execute("""
         CREATE TABLE IF NOT EXISTS offers (
         id            INTEGER PRIMARY KEY AUTOINCREMENT,
-        offer_id     TEXT,
         depart_time  TEXT,
         depart_iata  TEXT,
         depart_key   INTEGER,
         arrival_time TEXT,
         arrival_iata TEXT,
         arrival_key  INTEGER,
-        price_total  REAL
+        price_total  REAL,
+        UNIQUE(depart_time, depart_iata, arrival_time, arrival_iata) ON CONFLICT IGNORE
       );""")
     conn.commit()
 
     for offer in flights.get('data', []):
-        offerID = offer.get('id')
         price = float(offer.get('price', {}).get('total', 0))
         # for every single iten
         for itinerary in offer.get('itineraries', []):
@@ -52,10 +51,10 @@ def main():
             destination = seg['arrival']['iataCode']
 
             curr.execute(
-              "INSERT INTO offers "
-              "(offer_id, depart_time, depart_iata, depart_key, arrival_time, arrival_iata, arrival_key, price_total) "
-              "VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-              (offerID, departureTime, departureLocation, iataToInt(departureLocation), arrivalTime, destination, iataToInt(destination), price))
+              "INSERT OR IGNORE INTO offers "
+              "(depart_time, depart_iata, depart_key, arrival_time, arrival_iata, arrival_key, price_total) "
+              "VALUES (?, ?, ?, ?, ?, ?, ?)",
+              (departureTime, departureLocation, iataToInt(departureLocation), arrivalTime, destination, iataToInt(destination), price))
 
     conn.commit()
     conn.close()

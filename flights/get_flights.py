@@ -7,9 +7,13 @@ from dotenv import load_dotenv
 
 
 # Amedus (flights)
-AMEDUS_BEARER_TOKEN="EpvQnrm8s4GYiuRHWLpAgTViMO2J"
+AMEDUS_BEARER_TOKEN="ovEASKQefE90nS0naDPKrP04wj6L"
 AMEDUS_API_KEY="4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8"
 AMEDUS_API_SECRET="f2PN9OPUyXrDiIQr"
+
+# To get new token, run 
+# curl "https://test.api.amadeus.com/v1/security/oauth2/token" -H "Content-Type: application/x-www-form-urlencoded" -d "grant_type=client_credentials&client_id=4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8&client_secret=f2PN9OPUyXrDiIQr"
+
 
 def main(depart, arrive, date):
     load_dotenv()

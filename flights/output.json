@@ -1,9 +1,174 @@
 {
   "meta": {
-    "count": 0,
+    "count": 1,
     "links": {
-      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=FCO&destinationLocationCode=SEA&departureDate=2025-06-01&adults=1&nonStop=true&max=10&currencyCode=USD"
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=MEX&destinationLocationCode=DEN&departureDate=2025-06-01&adults=1&nonStop=true&max=10&currencyCode=USD"
     }
   },
-  "data": []
+  "data": [
+    {
+      "type": "flight-offer",
+      "id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": false,
+      "nonHomogeneous": false,
+      "oneWay": false,
+      "isUpsellOffer": false,
+      "lastTicketingDate": "2025-04-23",
+      "lastTicketingDateTime": "2025-04-23",
+      "numberOfBookableSeats": 3,
+      "itineraries": [
+        {
+          "duration": "PT3H39M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "MEX",
+                "at": "2025-06-01T08:10:00"
+              },
+              "arrival": {
+                "iataCode": "DEN",
+                "at": "2025-06-01T11:49:00"
+              },
+              "carrierCode": "F9",
+              "number": "6760",
+              "aircraft": {
+                "code": "320"
+              },
+              "duration": "PT3H39M",
+              "id": "1",
+              "numberOfStops": 0,
+              "blacklistedInEU": false
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "USD",
+        "total": "175.43",
+        "base": "56.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "175.43"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": false
+      },
+      "validatingAirlineCodes": [
+        "F9"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "USD",
+            "total": "175.43",
+            "base": "56.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "1",
+              "cabin": "ECONOMY",
+              "fareBasis": "W00PV5N",
+              "brandedFare": "ECO",
+              "brandedFareLabel": "STANDARD",
+              "class": "W",
+              "amenities": [
+                {
+                  "description": "UPTO100LB 45KG BAGGAGE",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "FIRST CHECKED BAG",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "SECOND CHECKED BAG",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CARRY16KG 35LB UPTO46LI 118LCM",
+                  "isChargeable": true,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRE RESERVED SEAT ASSIGNMENT",
+                  "isChargeable": true,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRIORITY BOARDING",
+                  "isChargeable": true,
+                  "amenityType": "TRAVEL_SERVICES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "BASIC SEAT",
+                  "isChargeable": true,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dictionaries": {
+    "locations": {
+      "MEX": {
+        "cityCode": "MEX",
+        "countryCode": "MX"
+      },
+      "DEN": {
+        "cityCode": "DEN",
+        "countryCode": "US"
+      }
+    },
+    "aircraft": {
+      "320": "AIRBUS A320"
+    },
+    "currencies": {
+      "USD": "US DOLLAR"
+    },
+    "carriers": {
+      "F9": "FRONTIER AIRLINES"
+    }
+  }
 }

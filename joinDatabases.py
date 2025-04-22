@@ -39,7 +39,6 @@ def main():
         """
         CREATE TABLE main.combined_offers AS
         SELECT
-          o.offer_id,
           o.depart_time,
           o.depart_iata,
           ad.city        AS depart_city,

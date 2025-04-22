@@ -19,7 +19,7 @@ def main():
         flights = json.load(f)
 
     # create table
-    databasePath = os.path.join(here, 'flight_offers.db')
+    databasePath = os.path.join(here, 'temp.db')
     conn = sqlite3.connect(databasePath)
     curr = conn.cursor()
     curr.execute("""

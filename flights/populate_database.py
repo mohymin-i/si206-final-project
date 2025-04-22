@@ -5,7 +5,7 @@ from datetime import date
 # Usage
 # run this code
 # change the airports list to get different flights
-# ignore 
+
 
 # routes we get data for
 def generateRoutes(airports):

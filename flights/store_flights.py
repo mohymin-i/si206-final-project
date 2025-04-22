@@ -12,7 +12,7 @@ def iataToInt(iata):
 def main():
     # load the json
     here = os.path.dirname(__file__)
-    flightPath = os.path.join(here, '../utilities/output.json')
+    flightPath = os.path.join(here, 'output.json')
     # I had trouble running it from the main directory, this solves that issue
 
     with open(flightPath, 'r', encoding='utf-8') as f:
@@ -59,7 +59,8 @@ def main():
 
     conn.commit()
     conn.close()
-    print("Inserted offers into flight_offers.db")
+    # print("Inserted offers into flight_offers.db") Quieted, too much output
+    print("", sep="", end="") # avoid spamming terminal with whitespace
 
 
 if __name__ == "__main__":

@@ -2,26 +2,28 @@ import subprocess
 import sys
 from datetime import date
 
+# Usage
+# run this code
+# change the airports list to get different flights
+
+# using this to store code
+
+
 # routes we get data for
-routes = [
-    ("JFK","LAX"),
-    ("JFK","ORD"),
-    ("JFK","MIA"),
-    ("LAX","SEA"),
-    ("LAX","DEN"),
-    ("ORD","DFW"),
-    ("MIA","ATL"),
-    ("SEA","SFO"),
-    ("DEN","PHX"),
-    ("DFW","BOS"),
-]
+def generateRoutes(airports):
+    routes = []
+    for start in airports:
+        for end in airports:
+            if (start != end):
+                routes.append((start, end))
+    return routes
 
 # departing date
 departingDate = "2025-06-01"
 
 # run the command
 def run(cmd):
-    print("---->", " ".join(cmd))
+    print("---->", " ".join(cmd)) # comment out if ouptut is annoying
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode:
         print("ERROR:", result.stderr)
@@ -30,6 +32,29 @@ def run(cmd):
         print(result.stdout.strip())
 
 def main():
+    airports = [
+        "LAX", 
+        "JFK", 
+        "DTW",
+        "ATL",
+        "LBR",
+        "SEA",
+        "FCO",
+        # "DEN",
+        # "MEX",
+        # "SFO",
+        # "ORD",
+        # "YYZ",
+        # "BUF",
+        # "CLE",
+        # "ANC",
+        # "CDG",
+        # "BER"
+    ] 
+
+    routes = generateRoutes(airports)
+    print("Finding flights between", len(routes), "pairs of airports")
+    # run("rm", "flight_offers.db") # delete the flight offers database
     for origin, dest in routes:
         # fetch data and store it in the json
         run(["python3", "get_flights.py", origin, dest, departingDate])

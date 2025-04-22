@@ -2,6 +2,11 @@ import sqlite3
 import os
 import sys
 
+# Usage
+# Go to flights and run populate_database.py to create flights
+# Go to weather and create weather database
+
+
 def main():
     here = os.path.dirname(__file__)
     # paths to databases

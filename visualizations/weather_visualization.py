@@ -1,39 +1,45 @@
 import matplotlib.pyplot as plt
+import sqlite3
+import pandas as pd
 import json
 from datetime import datetime
 
 # Get min and max weather temperature function
 def get_weather_min_max():
-    #Load JSON data
-    with open("weather/weather_output.json", "r") as f:
-        weather_data = json.load(f)
-
-    forecasts = weather_data['DailyForecasts']
+    #Connect to weather database
+    conn = sqlite3.connect("weather/weather.db")
+    
+    query = """
+    SELECT
+        forecast_date,
+        min_value,
+        max_value
+    FROM daily
+    GROUP BY forecast_date
+    ORDER BY forecast_date
+    LIMIT 5
+    """
+    
+    df = pd.read_sql_query(query, conn)
+    conn.close()
 
     dates = []
-    min_temps = []
-    max_temps = []
+    min_temps = df['min_value'].tolist()
+    max_temps = df['max_value'].tolist()
 
-    #For loop to loop through forecast data
-    for forecast in forecasts:
-        #Collect and properly format date
-        date_str = forecast["Date"]
-        date_obj = datetime.fromisoformat(date_str[:-6]) #Fixes timezone differences
+    #Process dates with timezones
+    for date_str in df['forecast_date']:
+        date_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
         dates.append(date_obj.strftime("%b %d"))
+   
 
-        #Collect min and max temps
-        min_temp = forecast["Temperature"]["Minimum"]['Value']
-        max_temp = forecast["Temperature"]["Maximum"]['Value']
-
-        min_temps.append(min_temp)
-        max_temps.append(max_temp)
+    fig, ax = plt.subplots()
 
     #Plot for line chart
     fig, ax = plt.subplots()
     ax.plot(dates, min_temps, label="Minimum Temperature", marker = 'o', color = "red")
     ax.plot(dates, max_temps, label="Maximum Temperature", marker = 'o', color = "blue")
     ax.fill_between(dates, min_temps, max_temps, color = "lightgray", alpha = 0.3)
-
     ax.set_title("Highs and Lows in Five Day Forecast")
     ax.set_xlabel("Date")
     ax.set_ylabel("Temperature (°F)")
@@ -43,3 +49,4 @@ def get_weather_min_max():
     plt.show()
 
 get_weather_min_max()
+

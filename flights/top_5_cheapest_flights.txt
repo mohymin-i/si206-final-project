@@ -1,0 +1,22 @@
+Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
+Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
+Price: $343.32
+--------------------------------------------------
+Depart: DTW (Detroit, MI, USA) at 2025-04-25T17:13:00
+Arrive: SEA (Seattle, WA, USA) at 2025-04-25T19:10:00
+Price: $343.32
+--------------------------------------------------
+Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
+Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
+Price: $343.32
+--------------------------------------------------
+Depart: DTW (Detroit, MI, USA) at 2025-04-25T17:13:00
+Arrive: SEA (Seattle, WA, USA) at 2025-04-25T19:10:00
+Price: $343.32
+--------------------------------------------------
+Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
+Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
+Price: $343.32
+--------------------------------------------------
+
+Average price of all flights in database: $343.32

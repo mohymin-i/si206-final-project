@@ -1,13 +1,28 @@
 import json
 import sqlite3
 import os
+import sys
+import requests
 
-def main():
+API_KEY="yAuYwbDrgKDZD0lNLHGeKL5TMNulN4bS"
+
+def main(location_code, forecast_type):
     # load the weather data
     here = os.path.dirname(__file__)
     json_path = os.path.join(here, 'weather_output.json')
-    with open(json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+
+    if forecast_type == "hourly":
+        url = f'http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/{location_code}'
+    else:
+        url = f'http://dataservice.accuweather.com/forecasts/v1/daily/5day/{location_code}'
+
+    params = {
+    "apikey": API_KEY
+    }
+
+    response = requests.get(url, params=params)
+    data = response.json()
+    print(data)
 
     # Create (or open) the SQLite database
     db_path = os.path.join(os.path.dirname(here), 'database.db')
@@ -101,5 +116,15 @@ def main():
     conn.close()
     print(f"Inserted weather data into {db_path}")
 
-if __name__ == '__main__':
-    main()
+if __name__ == "__main__":
+    try:
+        code, forecast_type = sys.argv[1:3]
+    except (IndexError, ValueError):
+        print("""Usage: python get_weather.py <LOCATION_CODE> <hourly || daily>
+Ex Los Angeles: $python get_weather.py 347625 daily
+See comment in this file for location codes.""")
+        sys.exit(1)
+    if forecast_type != "hourly" and forecast_type != "daily":
+        print("Error, unknown forecast type, only use 'daily' or 'hourly'")
+        sys.exit(1)
+    main(code, forecast_type)

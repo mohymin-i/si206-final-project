@@ -1,6 +1,15 @@
+import requests
 import json
 import sqlite3
+import sys
 import os
+from dotenv import load_dotenv
+
+# Amadeus credentials
+AMADEUS_API_KEY = "4vvQPNk3Hj6WRHHCZy1QSqvZVgbncqA8"
+AMADEUS_API_SECRET = "f2PN9OPUyXrDiIQr"
+AMEDEUS_BEARER_TOKEN = ""
+AMADEUS_AUTH_URL = "https://test.api.amadeus.com/v1/security/oauth2/token"
 
 def iataToInt(iata):
     integerKey = 0
@@ -9,17 +18,48 @@ def iataToInt(iata):
         integerKey += ord(char)
     return integerKey
 
-def main():
-    # load the json
+
+def get_flights(depart, arrive, date, bearer_token):
+    url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
+    params = {
+        "originLocationCode": depart,
+        "destinationLocationCode": arrive,
+        "departureDate": date,
+        "adults": 1,
+        "nonStop": "true",
+        "max": 10,
+        "currencyCode": "USD"
+    }
+    headers = {
+        'Authorization': f'Bearer {bearer_token}'
+    }
+    return requests.get(url, params=params, headers=headers)
+
+def refresh_token():
+    response = requests.post(
+        AMADEUS_AUTH_URL,
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+        data={
+            "grant_type": "client_credentials",
+            "client_id": AMADEUS_API_KEY,
+            "client_secret": AMADEUS_API_SECRET
+        }
+    )
+    return response.json()["access_token"]
+
+def main(depart, arrive, date):
+
+    response = get_flights(depart, arrive, date, AMEDEUS_BEARER_TOKEN)
+    flights = response.json()
+
+    if flights.get("errors", 0):
+        token = refresh_token()
+        response = get_flights(depart, arrive, date, token)
+        flights = response.json()
+    else:
+        print("worked first time")
+
     here = os.path.dirname(__file__)
-    flightPath = os.path.join(os.path.dirname(here), 'output.json')
-    
-    # I had trouble running it from the main directory, this solves that issue
-
-    with open(flightPath, 'r', encoding='utf-8') as f:
-        flights = json.load(f)
-
-    # create table
     databasePath = os.path.join(os.path.dirname(here), 'database.db')
     conn = sqlite3.connect(databasePath)
     curr = conn.cursor()
@@ -39,12 +79,9 @@ def main():
 
     for offer in flights.get('data', []):
         price = float(offer.get('price', {}).get('total', 0))
-        # for every single iten
         for itinerary in offer.get('itineraries', []):
-            # skip over non direct flights
             if len(itinerary.get('segments', [])) != 1:
                 continue
-
             seg = itinerary['segments'][0]
             departureTime = seg['departure']['at']
             departureLocation = seg['departure']['iataCode']
@@ -59,9 +96,14 @@ def main():
 
     conn.commit()
     conn.close()
-    # print("Inserted offers into flight_offers.db") Quieted, too much output
-    print("", sep="", end="") # avoid spamming terminal with whitespace
-
+    print("", sep="", end="")
 
 if __name__ == "__main__":
-    main()
+    try:
+        depart, arrive, date = sys.argv[1:4]
+    except ValueError:
+        print("""Usage: python get_flights.py <DEPART LOCATION CODE> <ARRIVAL LOCATION CODE> <DEPARTURE_DATE>
+        - Ex: $python get_flights.py DTW SEA 2025-05-05
+        - Dates must be in the future \n""")
+        sys.exit(1)
+    main(depart, arrive, date)

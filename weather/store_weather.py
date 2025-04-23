@@ -63,10 +63,9 @@ def main(location_code, forecast_type):
     # insert stuff into headline 
     # only a single row (today's forecast)
     headline = data.get('Headline', {})
-    curr.execute('DELETE FROM headline;')
     curr.execute(
         '''INSERT INTO headline (effective_date, severity, text, category, end_date)
-           VALUES (?, ?, ?, ?, ?)''',
+        VALUES (?, ?, ?, ?, ?)''',
         (
             headline.get('EffectiveDate'),
             headline.get('Severity'),
@@ -77,7 +76,7 @@ def main(location_code, forecast_type):
     )
 
     # insert stuff into daily
-    curr.execute('DELETE FROM daily;')
+
     for fcast in data.get('DailyForecasts', []):
         temp = fcast.get('Temperature', {})
         minimum = temp.get('Minimum', {})
@@ -91,11 +90,11 @@ def main(location_code, forecast_type):
 
         curr.execute(
             '''INSERT INTO daily (
-                   forecast_date, epoch_date,
-                   min_value, max_value,
-                   day_phrase, day_has_precipitation, day_precip_type, day_precip_intensity,
-                   night_phrase, night_has_precipitation, night_precip_type, night_precip_intensity
-               ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
+                forecast_date, epoch_date,
+                min_value, max_value,
+                day_phrase, day_has_precipitation, day_precip_type, day_precip_intensity,
+                night_phrase, night_has_precipitation, night_precip_type, night_precip_intensity
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)''',
             (
                 fcast.get('Date'),
                 fcast.get('EpochDate'),
@@ -120,8 +119,8 @@ if __name__ == "__main__":
     try:
         code, forecast_type = sys.argv[1:3]
     except (IndexError, ValueError):
-        print("""Usage: python get_weather.py <LOCATION_CODE> <hourly || daily>
-Ex Los Angeles: $python get_weather.py 347625 daily
+        print("""Usage: python store_weather.py <LOCATION_CODE> <hourly || daily>
+Ex Los Angeles: $python store_weather.py 347625 daily
 See comment in this file for location codes.""")
         sys.exit(1)
     if forecast_type != "hourly" and forecast_type != "daily":

@@ -3,7 +3,7 @@ import os
 
 def fetch_top_5_cheapest_flights():
     here = os.path.dirname(__file__)
-    db_path = os.path.join(here, os.pardir, 'project.db')
+    db_path = os.path.join(here, os.pardir, 'database.db')
 
     conn = sqlite3.connect(db_path)
     curr = conn.cursor()

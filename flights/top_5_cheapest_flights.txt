@@ -1,22 +1,22 @@
-Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
-Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
-Price: $343.32
+Depart: ATL (Atlanta, GA, 196) at 2025-04-26T09:05:00
+Arrive: BOS (Boston, MA, 196) at 2025-04-26T11:48:00
+Price: $58.94
 --------------------------------------------------
-Depart: DTW (Detroit, MI, USA) at 2025-04-25T17:13:00
-Arrive: SEA (Seattle, WA, USA) at 2025-04-25T19:10:00
-Price: $343.32
+Depart: DTW (Detroit, MI, 196) at 2025-04-26T19:39:00
+Arrive: MCO (Orlando, FL, 196) at 2025-04-26T22:30:00
+Price: $89.97
 --------------------------------------------------
-Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
-Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
-Price: $343.32
+Depart: ATL (Atlanta, GA, 196) at 2025-04-26T07:29:00
+Arrive: ORD (Chicago, IL, 196) at 2025-04-26T08:48:00
+Price: $104.00
 --------------------------------------------------
-Depart: DTW (Detroit, MI, USA) at 2025-04-25T17:13:00
-Arrive: SEA (Seattle, WA, USA) at 2025-04-25T19:10:00
-Price: $343.32
+Depart: ATL (Atlanta, GA, 196) at 2025-04-26T18:49:00
+Arrive: EWR (Newark, NJ, 196) at 2025-04-26T21:05:00
+Price: $108.02
 --------------------------------------------------
-Depart: DTW (Detroit, MI, USA) at 2025-04-25T07:00:00
-Arrive: SEA (Seattle, WA, USA) at 2025-04-25T08:57:00
-Price: $343.32
+Depart: ATL (Atlanta, GA, 196) at 2025-04-26T14:11:00
+Arrive: LGA (New York, NY, 196) at 2025-04-26T16:29:00
+Price: $108.02
 --------------------------------------------------
 
-Average price of all flights in database: $343.32
+Average price of all flights in database: $271.33

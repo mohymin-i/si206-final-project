@@ -103,7 +103,7 @@ if __name__ == "__main__":
         depart, arrive, date = sys.argv[1:4]
     except ValueError:
         print("""Usage: python get_flights.py <DEPART LOCATION CODE> <ARRIVAL LOCATION CODE> <DEPARTURE_DATE>
-        - Ex: $python get_flights.py DTW SEA 2025-05-05
+        - Ex: $python store_flights.py DTW SEA 2025-05-05
         - Dates must be in the future \n""")
         sys.exit(1)
     main(depart, arrive, date)

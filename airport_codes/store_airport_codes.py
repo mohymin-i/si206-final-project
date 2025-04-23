@@ -17,10 +17,6 @@ def iataToInt(iata):
 
 def main():
     here = os.path.dirname(__file__)
-    json_path = os.path.join(here, 'output.json')
-
-    with open(json_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
 
     url = "https://www.ccra.com/airport-codes/"
     response = requests.get(url)

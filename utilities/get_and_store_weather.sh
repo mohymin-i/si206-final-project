@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
 
-# Location codes: 348308 351409 349727 347625 347629 347936 351194
+for code in 348308 351409 349727 347625 347629 347936 351194 28143 113487 60449 101924 107487 178087 127164 308526 328328 182536 1123655 208971 207375 226396 226081 242560 264120 294021; do
 
-for code in 348308 351409 349727 347625 347629 347936 351194; do
-
-  python ../weather/get_weather.py "$code" daily
-  echo "Ran get_weather.py $code daily"
-  python ../weather/store_weather.py daily
+  python ../weather/store_weather.py $code daily
   echo "Stored daily weather for code $code"
-
-  python ../weather/get_weather.py "$code" hourly
-  echo "Ran get_weather.py $code hourly"
-  python ../weather/store_weather.py hourly
-  echo "Stored hourly weather for code $code"
 
 done

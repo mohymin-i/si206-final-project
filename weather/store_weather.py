@@ -10,7 +10,7 @@ def main():
         data = json.load(f)
 
     # Create (or open) the SQLite database
-    db_path = os.path.join(here, 'weather.db')
+    db_path = os.path.join(os.path.dirname(here), 'weather.db')
     conn = sqlite3.connect(db_path)
     curr = conn.cursor()
 

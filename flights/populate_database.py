@@ -52,12 +52,11 @@ def main():
 
     routes = generateRoutes(airports)
     print("Finding flights between", len(routes), "pairs of airports")
-    # run("rm", "flight_offers.db") # delete the flight offers database
     for origin, dest in routes:
         # fetch data and store it in the json
-        run(["python3", "get_flights.py", origin, dest, departingDate])
+        run(["python3", "flights/get_flights.py", origin, dest, departingDate])
         # store the flights
-        run(["python3", "store_flights.py"])
+        run(["python3", "flights/store_flights.py"])
     # print when done
     print("Done populating offers.")
 

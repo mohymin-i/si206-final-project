@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 def visualize_average_flight_prices():
-    conn = sqlite3.connect("flights/flight_offers.db")
+    conn = sqlite3.connect("database.db")
 
     # Get date and average price
     query = """

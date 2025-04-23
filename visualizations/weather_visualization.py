@@ -7,7 +7,7 @@ from datetime import datetime
 # Get min and max weather temperature function
 def get_weather_min_max():
     #Connect to weather database
-    conn = sqlite3.connect("weather/weather.db")
+    conn = sqlite3.connect("database.db")
     
     query = """
     SELECT

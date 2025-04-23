@@ -4,7 +4,7 @@ import os
 
 def visualize_airports_by_country():
     # Connect to the database
-    conn = sqlite3.connect("airport_codes/airport_codes.db")
+    conn = sqlite3.connect("database.db")
     cursor = conn.cursor()
     
     target_countries = ['Spain', 'Greece', 'Denmark', 'India', 'Italy']
